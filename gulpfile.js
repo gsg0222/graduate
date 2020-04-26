@@ -137,10 +137,16 @@ gulp.task('watch', function (done) {
  */
 gulp.task('default',
 	gulp.series(
-		'copyResource',
-		'imagemin',
-		'sass',
-		'css',
-		'jsmin',
-		'js',
+		gulp.parallel(
+			'copyResource',
+			'imagemin',
+			gulp.series(
+				'sass',
+				'css',
+			),
+			gulp.series(
+				'jsmin',
+				'js',
+			),
+		),
 		gulp.parallel('browser-sync', 'watch')));

@@ -39,7 +39,7 @@ const imageminOption = [
 ];
 
 /* フォルダ指定 */
-const distDir = 'dist/';
+const distDir = 'graduate/';
 const srcDir = 'src/';
 
 /* browser-sync */

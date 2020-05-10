@@ -1,0 +1,31 @@
+.card {
+    background-color: $clr_strong1;
+
+    &__img-wrapper {
+        position: relative;
+        padding-top: 140 / 250 * 100%;
+        overflow: hidden;
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+
+    &__body {
+        padding: 15px;
+        min-height: 120px;
+    }
+
+    &__date {
+        font-size: $fz_min;
+        line-height: (21 / 12);
+    }
+
+    &__text {
+        font-size: $fz_normal;
+        line-height: (21 / 16);
+    }
+}

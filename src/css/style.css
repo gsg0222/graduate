@@ -1,16 +1,306 @@
-/* colors */
-
 body {
-	background-color: #00f;
-	color: #fff;
+	background-image: url(../img/bgi.png);
+	background-repeat: repeat;
 	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
-.clickable-img {
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+.nav {
+	align-items: center;
+	display: flex;
+	height: 90px;
+	justify-content: center;
+}
+
+.nav__item {
+	display: block;
+}
+
+.nav__item:not(:last-child) {
+	margin-right: 45px;
+}
+
+.nav__item:hover,
+.nav__item:focus {
+	opacity: 0.8;
+	transition: .3s;
+}
+
+.nav__anchor {
+	display: block;
+}
+
+.nav__title {
+	color: #421f15;
+	font-size: 12px;
+	text-align: center;
+}
+
+.nav__english {
+	color: #421f15;
+	font-size: 22px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.main-visual {
+	background-image: url(../img/hero.png);
+	background-position: center;
+	padding-bottom: 60px;
+	padding-top: 60px;
+	position: relative;
+}
+
+.main-visual__title {
+	margin: 0 10%;
+	padding-bottom: 88px;
+	width: 80%;
+}
+
+.main-visual__title img {
+	width: 100%;
+}
+
+.main-visual__content {
+	align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 10%;
+}
+
+.main-visual__date {
+	width: 370px;
+}
+
+.main-visual__date img {
+	width: 100%;
+}
+
+.main-visual__text {
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 1.57143;
+	width: 340px;
+}
+
+.main-visual__btn {
+	bottom: -30px;
+	position: absolute;
+	right: 10%;
+}
+
+.btn {
+	background-color: #c63205;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 120px;
+}
+
+.btn:hover,
+.btn:focus {
+	opacity: 0.8;
+	transition: .3s;
+}
+
+.btn--large {
+	height: 60px;
+	line-height: 60px;
+	width: 200px;
+}
+
+.title {
+	color: #301F1B;
+	font-size: 43px;
+	line-height: 66 / 43;
+	text-align: center;
+}
+
+.introduction {
+	background-color: rgba(255, 255, 255, 0.29);
+	background-image: url(../img/introduction_bgi.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	margin: 60px 15% 0 15%;
+}
+
+.introduction__title {
+	padding-top: 26px;
+}
+
+.introduction__sub-title {
+	color: #301F1B;
+	font-size: 34px;
+	padding-bottom: 25px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.introduction__content {
+	display: flex;
+	padding: 0 30px 30px;
+}
+
+.introduction__text {
+	font-size: 12px;
+	line-height: 1.75;
+}
+
+.introduction__text:not(:last-child) {
+	margin-right: 30px;
+}
+
+.news {
+	margin: 60px 15% 0;
+	position: relative;
+}
+
+.news__title {
+	margin-bottom: 30px;
+}
+
+.news__btn {
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+
+.news__cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.news__card {
+	margin-bottom: 30px;
+	width: 30.8642%;
+}
+
+.card {
+	background-color: #ffffff;
+}
+
+.card__img-wrapper {
+	overflow: hidden;
+	padding-top: 56%;
+	position: relative;
+}
+
+.card__img {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.card__body {
+	min-height: 120px;
+	padding: 15px;
+}
+
+.card__date {
+	font-size: 12px;
+	line-height: 1.75;
+}
+
+.card__text {
+	font-size: 16px;
+	line-height: 1.3125;
+}
+
+@media screen and (max-width: 991px) {
+
+.main-visual__date {
+	width: 280px;
+}
+
+.main-visual__text {
+	width: 250px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+.nav__item:not(:last-child) {
+	margin-right: 20px;
+}
+
+.nav__title {
+	font-size: 16px;
+}
+
+.nav__english {
+	display: none;
+}
+
+.main-visual__title {
+	padding-bottom: 40px;
+}
+
+.main-visual__content {
+	display: block;
+}
+
+.main-visual__date {
+	margin: 0 auto;
+	margin-bottom: 40px;
+	width: 80%;
+}
+
+.main-visual__text {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.main-visual__btn {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.title {
+	font-size: 22px;
+}
+
+.introduction {
+	background-size: 150px;
+	margin: 60px 5% 0;
+}
+
+.introduction__sub-title {
+	font-size: 22px;
+}
+
+.introduction__content {
+	display: block;
+}
+
+.introduction__text:not(:last-child) {
+	margin-right: 0;
+}
+
+}
+
+@media screen and (max-width: 575px) {
+
+.nav {
+	flex-wrap: wrap;
+}
+
+.nav__item {
 	width: 30%;
 }
 
-.bgc--mod {
-	background-color: #f00;
+.nav__item:not(:last-child) {
+	margin-right: 0;
+}
+
 }
 

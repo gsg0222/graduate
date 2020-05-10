@@ -1,0 +1,78 @@
+.main-visual {
+    background-image: url(../img/hero.png);
+    background-position: center;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__title {
+        padding-bottom: 88px;
+        width: 80%;
+        margin: 0 10%;
+
+        img {
+            width: 100%;
+        }
+
+        @include mq() {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 10%;
+
+        @include mq() {
+            display: block;
+
+        }
+    }
+
+    &__date {
+        width: 370px;
+
+        img {
+            width: 100%;
+        }
+
+        @include mq(lg) {
+            width: 280px;
+        }
+
+        @include mq() {
+            margin: 0 auto;
+            width: 80%;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__text {
+        width: 340px;
+        color: $clr_strong1;
+        font-size: $fz_small;
+        line-height: (22 / 14);
+
+        @include mq(lg) {
+            width: 250px;
+        }
+
+        @include mq() {
+            margin: 0 auto;
+            width: 80%;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: -30px;
+        right: 10%;
+
+        @include mq() {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

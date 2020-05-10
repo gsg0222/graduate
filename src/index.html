@@ -4,16 +4,176 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gulpfile.js開発のサンプルページ</title>
+	<title>TOP | 完全版マハーバーラタ</title>
+	<link rel="stylesheet" href="css/html5reset-1.6.1.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<main>
-		<h1>Gulpfile.js開発のサンプルページ</h1>
-		<p>下の画像をクリックすると背景色が変わります。</p>
-		<img class="clickable-img" src="./img/sample.jpg" alt="サンプル画像" onclick="changeBGC()">
-	</main>
+	<header>
+		<nav>
+			<ul class="nav">
+				<li class="nav__item">
+					<a class="nav__anchor" href="#">
+						<p class="nav__title">トップ</p>
+						<p class="nav__english">TOP</p>
+					</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__anchor" href="#">
+						<p class="nav__title">ニュース</p>
+						<p class="nav__english">NEWS</p>
+					</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__anchor" href="#">
+						<p class="nav__title">ストーリー</p>
+						<p class="nav__english">STORY</p>
+					</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__anchor" href="#">
+						<p class="nav__title">著名人コメント</p>
+						<p class="nav__english">COMMENTS</p>
+					</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__anchor" href="#">
+						<p class="nav__title">キャスト</p>
+						<p class="nav__english">CAST</p>
+					</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__anchor" href="#">
+						<p class="nav__title">問い合わせ</p>
+						<p class="nav__english">INQUIRY</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- ここまでheader -->
+
+	<section class="main-visual">
+		<figure class="main-visual__title">
+			<img src="img/main-title.png" alt="完全版マハーバーラタ">
+		</figure>
+		<div class="main-visual__content">
+			<div class="main-visual__date">
+				<figure>
+					<img src="img/date.png" alt="2020年7月4日から7日、なかのZERO大ホール">
+				</figure>
+			</div>
+			<div class="main-visual__text">
+				<p>
+					小池博史ブリッジプロジェクトが2013年から2020年までの8カ年計画で臨む、インド古代叙事詩「マハーバーラタ」の全編舞台作品化計画。いよいよその集大成である完全版マハーバーラタの公演が決定！！<br>
+					アジア各国のアーティストらが共同で取り組み、発展を遂げる本事業はアジア、そして世界へ向けてビッグウェーブを起こす。タイと日本から世界へと発信する本作。どうぞお見逃しなく！
+				</p>
+			</div>
+			<!-- /.main-visual__text -->
+		</div>
+		<!-- /.main-visual__content -->
+		<a href="#" class="btn btn--large main-visual__btn">チケット予約サイトへ</a>
+	</section>
+
+	<section class="introduction">
+		<p class="title introduction__title">INTRODUCTION</p>
+		<p class="introduction__sub-title">なぜ今「マハーバーラタ」なのか？</p>
+		<div class="introduction__content">
+			<p class="introduction__text">
+				「平和」について改めて考えるストーリー全世界を司るものが神だとすれば、なぜ神であるクリシュナは、策を巡らしてまで、登場人物すべてを滅亡へと導いたのか？<br>
+				それは、「戦い」そのものを廃絶しようとしたからだと考えられる。戦うことそのものへの虚しさ、「戦い」そのものの「悪」を問う物語が「マハーバーラタ」と言える。<br>
+				平和とは？私たちには何ができるのか？根源的な「平和」を希求する物語。</p>
+			<p class="introduction__text">現代社会を映し出す人間ドラマ対難民問題やヘイトスピーチ問題に見られるように、文化的背景が「異」なるものに対して非寛容になりつつある現代社会。<br>
+				神の血を引きながらも、現代人同様に欲望や嫉妬によって争う登場人物たちが破滅していく様を描いた「マハーバーラタ」のストーリーは、人類が歩んできた争いの歴史の物語とも言い換えられる。<br>
+				非寛容による悲劇の物語である「マハーバーラタ」を現代社会に重ね合わせつつ描くことで「寛容」の重要性を示す。</p>
+		</div>
+		<!-- /.introduction__content -->
+	</section>
+
+	<section class="news">
+		<p class="title news__title">NEWS</p>
+		<a href="#" class="btn news__btn">ニュース一覧へ</a>
+		<div class="news__cards">
+			<div class="card news__card">
+				<figure class="card__img-wrapper">
+					<img class="card__img" src="img/news1.png" alt="ニュース1">
+				</figure>
+				<div class="card__body">
+					<p class="card__date">2019.9.30</p>
+					<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
+				</div>
+				<!-- /.card__body -->
+			</div>
+			<!-- /.card news__card -->
+			<div class="card news__card">
+				<figure class="card__img-wrapper">
+					<img class="card__img" src="img/news1.png" alt="ニュース1">
+				</figure>
+				<div class="card__body">
+					<p class="card__date">2019.9.30</p>
+					<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
+				</div>
+				<!-- /.card__body -->
+			</div>
+			<!-- /.card news__card -->
+			<div class="card news__card">
+				<figure class="card__img-wrapper">
+					<img class="card__img" src="img/news1.png" alt="ニュース1">
+				</figure>
+				<div class="card__body">
+					<p class="card__date">2019.9.30</p>
+					<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
+				</div>
+				<!-- /.card__body -->
+			</div>
+			<!-- /.card news__card -->
+			<div class="card card--sub news__card-sub">
+				<figure class="card__img-wrapper">
+					<img class="card__img" src="img/news1.png" alt="ニュース1">
+				</figure>
+				<div class="card__body">
+					<p class="card__date">2019.9.30</p>
+					<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
+				</div>
+				<!-- /.card__body -->
+			</div>
+			<!-- /.card__sub news__card-sub -->
+			<div class="card card--sub news__card-sub">
+				<figure class="card__img-wrapper">
+					<img class="card__img" src="img/news1.png" alt="ニュース1">
+				</figure>
+				<div class="card__body">
+					<p class="card__date">2019.9.30</p>
+					<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
+				</div>
+				<!-- /.card__body -->
+			</div>
+			<!-- /.card__sub news__card-sub -->
+		</div>
+		<!-- /.news__cards -->
+	</section>
+
+	<section class="story">
+
+	</section>
+
+	<section class="comments">
+
+	</section>
+
+	<section class="casts">
+
+	</section>
+
+	<!-- この下からfooter -->
+	<section class="schedule">
+
+	</section>
+
+	<footer>
+
+	</footer>
 	<script type="text/javascript" src="js/script.min.js"></script>
 </body>
 

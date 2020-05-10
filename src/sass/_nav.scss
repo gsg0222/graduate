@@ -1,0 +1,64 @@
+.nav {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(sm) {
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: block;
+
+        &:not(:last-child) {
+            margin-right: 45px;
+        }
+
+        &:hover,
+        &:focus {
+            transition: .3s;
+            opacity: 0.8;
+        }
+
+        @include mq() {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+        }
+
+        @include mq(sm) {
+            width: 30%;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__anchor {
+        display: block;
+    }
+
+    &__title {
+        font-size: $fz_min;
+        text-align: center;
+        color: $clr_point;
+
+        @include mq() {
+            font-size: $fz_normal;
+        }
+    }
+
+    &__english {
+        font-size: $fz_large;
+        text-align: center;
+        margin-top: 10px;
+        color: $clr_point;
+
+        @include mq() {
+            display: none;
+        }
+    }
+}

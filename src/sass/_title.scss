@@ -1,0 +1,10 @@
+.title {
+    color: #301F1B;
+    font-size: 43px;
+    text-align: center;
+    line-height: 66 / 43;
+
+    @include mq() {
+        font-size: $fz_large;
+    }
+}

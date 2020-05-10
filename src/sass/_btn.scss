@@ -1,0 +1,22 @@
+.btn {
+    display: inline-block;
+    color: $clr_strong1;
+    background-color: $clr_strong2;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: $fz_small;
+
+    &:hover,
+    &:focus {
+        transition: .3s;
+        opacity: 0.8;
+    }
+
+    &--large {
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+    }
+}

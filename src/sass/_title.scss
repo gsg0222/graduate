@@ -4,6 +4,10 @@
     text-align: center;
     line-height: 66 / 43;
 
+    &--white {
+        color: $clr_strong1;
+    }
+
     @include mq() {
         font-size: $fz_large;
     }

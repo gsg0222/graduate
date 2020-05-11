@@ -28,4 +28,23 @@
         font-size: $fz_normal;
         line-height: (21 / 16);
     }
+
+    &--sub {
+        display: flex;
+        align-items: flex-start;
+
+        .card {
+            &__img-wrapper {
+                flex: 0 0 40%;
+                // 画像サイズの比率の40%(flexで指定した幅、40%分)でPTを指定
+                padding-top: (88px / 156px) * 0.4 * 100%;
+            }
+
+            &__body {
+                box-sizing: border-box;
+                flex: 0 0 60%;
+                min-height: 0;
+            }
+        }
+    }
 }

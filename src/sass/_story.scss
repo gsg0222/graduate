@@ -14,7 +14,7 @@
         justify-content: flex-end;
         margin: 0 15% 30px;
 
-        @include mq() {
+        @include mq(lg) {
             margin: 0 5% 30px;
         }
     }

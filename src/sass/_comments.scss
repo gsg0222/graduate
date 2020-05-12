@@ -1,0 +1,77 @@
+.comments {
+    position: relative;
+    margin: 60px 15% 0;
+
+    @include mq(lg) {
+        margin: 60px 5% 0;
+    }
+
+    &__title {
+        color: #301F1B;
+    }
+
+    &__caption {
+        margin-top: 30px;
+        text-align: center;
+        font-size: $fz_large;
+        color: #301F1B;
+
+        @include mq() {
+            font-size: $fz_normal;
+            text-align: left;
+        }
+    }
+
+    &__content {
+        background-image: url(../img/comments_bgi.png);
+        background-size: cover;
+        background-position: center;
+        margin-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    &__person {
+        padding-top: 45px;
+        color: $clr_strong1;
+        font-size: $fz_large;
+        margin-left: 30px;
+
+        @include mq() {
+            font-size: $fz_small;
+            margin-left: 5%;
+        }
+    }
+
+    &__name {
+        font-size: $fz_very_large;
+
+        @include mq() {
+            font-size: $fz_normal;
+        }
+    }
+
+    &__text {
+        margin-top: 15px;
+        color: $clr_strong1;
+        font-size: $fz_small;
+        margin-left: 30px;
+        width: 420px;
+        line-height: (22 / 14);
+
+        @include mq() {
+            margin: 15px 5% 0;
+            width: auto;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+
+        @include mq() {
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+}

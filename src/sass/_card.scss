@@ -1,6 +1,10 @@
 .card {
     background-color: $clr_strong1;
 
+    &__anchor {
+        display: block;
+    }
+
     &__img-wrapper {
         position: relative;
         padding-top: 140 / 250 * 100%;
@@ -15,6 +19,7 @@
     }
 
     &__body {
+        box-sizing: border-box;
         padding: 15px;
         min-height: 120px;
     }
@@ -30,20 +35,35 @@
     }
 
     &--sub {
-        display: flex;
-        align-items: flex-start;
 
         .card {
+            &__anchor {
+                display: flex;
+                align-items: flex-start;
+
+                @include mq() {
+                    display: block;
+                }
+            }
+
             &__img-wrapper {
                 flex: 0 0 40%;
                 // 画像サイズの比率の40%(flexで指定した幅、40%分)でPTを指定
                 padding-top: (88px / 156px) * 0.4 * 100%;
+
+                @include mq() {
+                    padding-top: 140 / 250 * 100%;
+                }
             }
 
             &__body {
                 box-sizing: border-box;
-                flex: 0 0 60%;
+                flex: 0 1 60%;
                 min-height: 0;
+
+                @include mq() {
+                    min-height: 120px;
+                }
             }
         }
     }

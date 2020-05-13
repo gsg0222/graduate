@@ -19,4 +19,12 @@
         height: 60px;
         line-height: 60px;
     }
+
+    &--border {
+        color: $clr_strong2;
+        box-sizing: border-box;
+        border: 5px solid $clr_strong2;
+        background-color: transparent;
+        line-height: 30px;
+    }
 }

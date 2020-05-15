@@ -7,14 +7,16 @@
 
     &__title {
         padding-bottom: 88px;
-        margin: 0 10%;
+        width: 80%;
+        max-width: 920px;
+        margin: 0 auto;
 
         img {
             width: 100%;
         }
 
         @include mq(lg) {
-            margin: 0 5%;
+            width: 90%;
         }
 
         @include mq() {
@@ -26,10 +28,12 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        margin: 0 10%;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 810px;
 
         @include mq(lg) {
-            margin: 0 5%;
+            width: 90%;
         }
 
         @include mq() {
@@ -63,7 +67,7 @@
         line-height: (22 / 14);
 
         @include mq(lg) {
-            width: 250px;
+            width: 300px;
         }
 
         @include mq() {

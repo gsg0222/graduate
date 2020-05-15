@@ -12,10 +12,13 @@
     &__content {
         display: flex;
         justify-content: flex-end;
-        margin: 0 15% 30px;
+        margin: 0 auto 30px;
+        width: 70%;
+        max-width: 810px;
 
         @include mq(lg) {
-            margin: 0 5% 30px;
+            margin: 0 auto 30px;
+            width: 90%;
         }
     }
 

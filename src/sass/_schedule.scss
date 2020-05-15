@@ -1,0 +1,83 @@
+.schedule {
+    margin: 60px auto 0;
+    width: 70%;
+    max-width: 810px;
+
+    @include mq(lg) {
+        width: 90%;
+    }
+
+    &__wrapper {
+        background-color: rgba($clr_strong1, 0.29);
+        padding-top: 30px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__contents {
+        margin: 0 auto;
+        width: ((810px - 170px) / 810px) * 100%;
+        padding-bottom: 60px;
+        color: #301F1B;
+
+        @include mq() {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        font-size: 20px;
+
+        @include mq() {
+            font-size: $fz_small;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-left: 8px;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__btns {
+        margin: 0 auto;
+        width: 430px;
+        display: flex;
+        margin-top: 30px;
+
+        @include mq() {
+            width: auto;
+            display: block;
+        }
+    }
+
+    &__contact-btn {
+        margin-right: 30px;
+
+        @include mq() {
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+    }
+
+    &__ticket-btn {
+        @include mq() {
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+        }
+
+    }
+}

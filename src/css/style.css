@@ -119,6 +119,13 @@ a {
 	width: 200px;
 }
 
+.btn--large-brown {
+	background-color: #421f15;
+	height: 60px;
+	line-height: 60px;
+	width: 200px;
+}
+
 .btn--border {
 	background-color: transparent;
 	border: 5px solid #c63205;
@@ -130,7 +137,6 @@ a {
 .title {
 	color: #301F1B;
 	font-size: 43px;
-	line-height: 66 / 43;
 	text-align: center;
 }
 
@@ -439,6 +445,57 @@ a {
 	text-align: center;
 }
 
+.schedule {
+	margin: 60px auto 0;
+	max-width: 810px;
+	width: 70%;
+}
+
+.schedule__wrapper {
+	background-color: rgba(255, 255, 255, 0.29);
+	padding-top: 30px;
+}
+
+.schedule__title {
+	margin-bottom: 25px;
+}
+
+.schedule__contents {
+	color: #301F1B;
+	margin: 0 auto;
+	padding-bottom: 60px;
+	width: 79.01235%;
+}
+
+.schedule__content {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 20px;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+.schedule__text {
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 8px;
+}
+
+.schedule__link {
+	text-decoration: underline;
+}
+
+.schedule__btns {
+	display: flex;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 430px;
+}
+
+.schedule__contact-btn {
+	margin-right: 30px;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {
@@ -458,18 +515,15 @@ a {
 }
 
 .introduction {
-	margin: 60px auto 0;
 	width: 90%;
 }
 
 .news {
-	margin: 60px auto 0;
 	padding-bottom: 40px;
 	width: 90%;
 }
 
 .story__content {
-	margin: 0 auto 30px;
 	width: 90%;
 }
 
@@ -478,12 +532,14 @@ a {
 }
 
 .comments {
-	margin: 60px auto 0;
 	width: 90%;
 }
 
 .cast__contents-inner {
-	margin: 0 auto 15px;
+	width: 90%;
+}
+
+.schedule {
 	width: 90%;
 }
 
@@ -637,6 +693,32 @@ a {
 .cast__img-wrapper {
 	margin: 0 auto 20px;
 	width: 240px;
+}
+
+.schedule__contents {
+	padding-bottom: 30px;
+}
+
+.schedule__content {
+	font-size: 14px;
+}
+
+.schedule__btns {
+	display: block;
+	width: auto;
+}
+
+.schedule__contact-btn {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.schedule__ticket-btn {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
 }
 
 }

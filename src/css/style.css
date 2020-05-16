@@ -496,6 +496,19 @@ a {
 	margin-right: 30px;
 }
 
+.footer {
+	background-color: #1A1A1A;
+	margin-top: 60px;
+	padding: 30px 0;
+}
+
+.footer__copy {
+	color: #ffffff;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {

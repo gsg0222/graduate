@@ -1,0 +1,12 @@
+.footer {
+    background-color: #1A1A1A;
+    margin-top: 60px;
+    padding: 30px 0;
+
+    &__copy {
+        display: block;
+        text-align: center;
+        color: $clr_strong1;
+        font-size: $fz_min;
+    }
+}

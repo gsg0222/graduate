@@ -617,6 +617,106 @@ a:focus {
 	width: 27px;
 }
 
+.news-single {
+	margin: 60px auto 0;
+	max-width: 810px;
+	width: 70%;
+}
+
+.news-single__img-wrapper img {
+	vertical-align: bottom;
+	width: 100%;
+}
+
+.news-single__title-wrapper {
+	background-color: #1A1A1A;
+	padding: 15px 30px;
+}
+
+.news-single__date {
+	color: #ffffff;
+	font-size: 12px;
+}
+
+.news-single__title {
+	color: #ffffff;
+	font-size: 26px;
+	margin-top: 20px;
+}
+
+.news-single__content {
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 30px;
+}
+
+.news-single__sub-title {
+	font-size: 22px;
+}
+
+.news-single__text {
+	font-size: 16px;
+	line-height: 1.625;
+	margin-top: 30px;
+}
+
+.news-single__page-nav {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.news-single__nav-wrapper {
+	align-items: center;
+	display: flex;
+	width: 44.44444%;
+}
+
+.news-single__prev-arrow {
+	background-color: #1A1A1A;
+	border-radius: 50%;
+	color: #F1C201;
+	flex: 0 0 32px;
+	font-size: 18px;
+	height: 32px;
+	line-height: 32px;
+	margin-right: 12px;
+	text-align: center;
+}
+
+.news-single__next-arrow {
+	background-color: #1A1A1A;
+	border-radius: 50%;
+	color: #F1C201;
+	flex: 0 0 32px;
+	font-size: 18px;
+	height: 32px;
+	line-height: 32px;
+	margin-left: 12px;
+	text-align: center;
+}
+
+.news-single__prev-date {
+	color: #333333;
+	font-size: 12px;
+}
+
+.news-single__prev-text {
+	color: #333333;
+	font-size: 14px;
+}
+
+.news-single__next-date {
+	color: #333333;
+	font-size: 12px;
+	text-align: right;
+}
+
+.news-single__next-text {
+	color: #333333;
+	font-size: 14px;
+	text-align: right;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {
@@ -669,6 +769,10 @@ a:focus {
 }
 
 .news-list {
+	width: 90%;
+}
+
+.news-single {
 	width: 90%;
 }
 
@@ -881,6 +985,32 @@ a:focus {
 .news-list__card {
 	margin-right: 0;
 	width: 100%;
+}
+
+.news-single__nav-wrapper {
+	width: 49.38272%;
+}
+
+.news-single__prev-arrow {
+	flex: 0 0 25px;
+	font-size: 14px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.news-single__next-arrow {
+	flex: 0 0 25px;
+	font-size: 14px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.news-single__prev-text {
+	font-size: 12px;
+}
+
+.news-single__next-text {
+	font-size: 12px;
 }
 
 }

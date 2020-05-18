@@ -1,0 +1,133 @@
+.news-single {
+    margin: 60px auto 0;
+    width: 70%;
+    max-width: 810px;
+
+    @include mq(lg) {
+        width: 90%;
+    }
+
+    &__img-wrapper {
+        img {
+            width: 100%;
+            // 画像下のスペースを埋めるために必要
+            vertical-align: bottom;
+        }
+    }
+
+    &__title-wrapper {
+        background-color: #1A1A1A;
+        padding: 15px 30px;
+    }
+
+    &__date {
+        color: $clr_strong1;
+        font-size: $fz_min;
+    }
+
+    &__title {
+        color: $clr_strong1;
+        font-size: 26px;
+        margin-top: 20px;
+    }
+
+    &__content {
+        padding: 30px;
+        background-color: rgba($clr_strong1, 0.9);
+
+    }
+
+    &__sub-title {
+        font-size: $fz_large;
+    }
+
+    &__text {
+        line-height: (26 / 16);
+        font-size: $fz_normal;
+        margin-top: 30px;
+    }
+
+    &__page-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    &__nav-wrapper {
+        display: flex;
+        align-items: center;
+        width: (360px / 810px) * 100%;
+
+        @include mq() {
+            width: (400px / 810px) * 100%;
+        }
+    }
+
+    &__prev-arrow {
+        flex: 0 0 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #1A1A1A;
+        color: #F1C201;
+        font-size: 18px;
+        text-align: center;
+        line-height: 32px;
+        margin-right: 12px;
+
+        @include mq() {
+            flex: 0 0 25px;
+            height: 25px;
+            font-size: $fz_small;
+            line-height: 25px;
+        }
+    }
+
+    &__next-arrow {
+        flex: 0 0 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #1A1A1A;
+        color: #F1C201;
+        font-size: 18px;
+        text-align: center;
+        line-height: 32px;
+        margin-left: 12px;
+
+        @include mq() {
+            flex: 0 0 25px;
+            height: 25px;
+            font-size: $fz_small;
+            line-height: 25px;
+        }
+    }
+
+    &__prev-date {
+        font-size: $fz_min;
+        color: $clr_normal;
+    }
+
+    &__prev-text {
+        font-size: $fz_small;
+        color: $clr_normal;
+
+        @include mq() {
+            font-size: $fz_min;
+        }
+    }
+
+    &__next-date {
+        font-size: $fz_min;
+        color: $clr_normal;
+        text-align: right;
+    }
+
+    &__next-text {
+        font-size: $fz_small;
+        color: $clr_normal;
+        text-align: right;
+
+        @include mq() {
+            font-size: $fz_min;
+        }
+    }
+}

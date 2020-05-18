@@ -9,6 +9,17 @@ a {
 	text-decoration: none;
 }
 
+a:hover,
+a:focus {
+	opacity: 0.8;
+	transition: 0.3s;
+}
+
+.breadcrumbs {
+	color: #333333;
+	font-size: 12px;
+}
+
 .nav {
 	align-items: center;
 	display: flex;
@@ -22,12 +33,6 @@ a {
 
 .nav__item:not(:last-child) {
 	margin-right: 45px;
-}
-
-.nav__item:hover,
-.nav__item:focus {
-	opacity: 0.8;
-	transition: .3s;
 }
 
 .nav__anchor {
@@ -105,12 +110,6 @@ a {
 	line-height: 40px;
 	text-align: center;
 	width: 120px;
-}
-
-.btn:hover,
-.btn:focus {
-	opacity: 0.8;
-	transition: .3s;
 }
 
 .btn--medium {
@@ -551,6 +550,73 @@ a {
 	right: 0;
 }
 
+.sub-header__breadcrumbs {
+	margin: 30px auto 0;
+	max-width: 810px;
+	width: 70%;
+}
+
+.news-list {
+	margin: 30px auto 0;
+	max-width: 810px;
+	width: 70%;
+}
+
+.news-list__cards {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px 0 -30px;
+}
+
+.news-list__card {
+	margin-bottom: 30px;
+	margin-right: 5%;
+	width: 30%;
+}
+
+.news-list__card:nth-child(3n) {
+	margin-right: 0;
+}
+
+.wp-pagenavi {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+	border: 2px solid #1A1A1A;
+	box-sizing: border-box;
+	color: #1A1A1A;
+	display: inline-block;
+	font-size: 12px;
+	height: 27px;
+	line-height: 27px;
+	margin: 0 3px;
+	text-align: center;
+	width: 27px;
+}
+
+.wp-pagenavi .current {
+	background-color: #1A1A1A;
+	color: #F4D102;
+	display: inline-block;
+	height: 27px;
+	line-height: 27px;
+	margin: 0 3px;
+	width: 27px;
+}
+
+.wp-pagenavi .page {
+	background-color: #1A1A1A;
+	color: #F4D102;
+	display: inline-block;
+	height: 27px;
+	line-height: 27px;
+	margin: 0 3px;
+	width: 27px;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {
@@ -595,6 +661,14 @@ a {
 }
 
 .schedule {
+	width: 90%;
+}
+
+.sub-header__img-wrapper {
+	width: 90%;
+}
+
+.news-list {
 	width: 90%;
 }
 
@@ -774,6 +848,39 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
+}
+
+.sub-header__img-wrapper {
+	display: block;
+}
+
+.sub-header__title-wrapper {
+	margin-right: 0;
+	width: 100%;
+}
+
+.sub-header__date-wrapper {
+	margin: 0 auto;
+	margin-top: 40px;
+	width: 90%;
+}
+
+.sub-header__btn {
+	right: 50%;
+	transform: translateX(50%);
+}
+
+.sub-header__breadcrumbs {
+	width: 90%;
+}
+
+.news-list__cards {
+	display: block;
+}
+
+.news-list__card {
+	margin-right: 0;
+	width: 100%;
 }
 
 }

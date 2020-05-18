@@ -12,6 +12,15 @@
         max-width: 810px;
         margin: 0 auto;
         padding-bottom: 60px;
+
+        @include mq(lg) {
+            width: 90%;
+        }
+
+        @include mq() {
+            display: block;
+        }
+
     }
 
     &__title-wrapper {
@@ -21,6 +30,11 @@
         img {
             width: 100%;
         }
+
+        @include mq() {
+            width: 100%;
+            margin-right: 0;
+        }
     }
 
     &__date-wrapper {
@@ -29,11 +43,32 @@
         img {
             width: 100%;
         }
+
+        @include mq() {
+            margin-top: 40px;
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 
     &__btn {
         position: absolute;
         right: 0;
         bottom: -20px;
+
+        @include mq() {
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+    &__breadcrumbs {
+        width: 70%;
+        max-width: 810px;
+        margin: 30px auto 0;
+
+        @include mq() {
+            width: 90%;
+        }
     }
 }

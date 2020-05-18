@@ -1,0 +1,38 @@
+.wp-pagenavi {
+    padding-top: 30px;
+    text-align: center;
+
+    .previouspostslink,
+    .nextpostslink {
+        margin: 0 3px;
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        box-sizing: border-box;
+        border: 2px solid #1A1A1A;
+        color: #1A1A1A;
+        font-size: $fz_min;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    .current {
+        margin: 0 3px;
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        background-color: #1A1A1A;
+        color: #F4D102;
+        line-height: 27px;
+    }
+
+    .page {
+        margin: 0 3px;
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        background-color: #1A1A1A;
+        color: #F4D102;
+        line-height: 27px;
+    }
+}

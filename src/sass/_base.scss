@@ -12,4 +12,10 @@ body {
 a {
     text-decoration: none;
     color: $clr_normal;
+
+    &:hover,
+    &:focus {
+        opacity: 0.8;
+        transition: 0.3s;
+    }
 }

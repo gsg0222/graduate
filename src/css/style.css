@@ -53,6 +53,7 @@ a:focus {
 }
 
 .main-visual {
+	background-image: url(../img/hero.png);
 	background-position: center;
 	background-size: cover;
 	padding-bottom: 60px;
@@ -513,6 +514,7 @@ a:focus {
 }
 
 .sub-header__wrapper {
+	background-image: url(../img/hero.png);
 	background-position: center;
 	background-size: cover;
 	padding-top: 60px;
@@ -717,6 +719,82 @@ a:focus {
 	text-align: right;
 }
 
+.story-detail__first {
+	background-color: #000;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.8)), url(../img/story1.png);
+	background-position: center, left center;
+	background-repeat: no-repeat;
+	background-size: cover, 70%;
+}
+
+.story-detail__no-bgi {
+	background-image: none !important;
+}
+
+.story-detail__breadcrumbs {
+	color: #ffffff;
+	margin: 30px auto 0;
+	max-width: 810px;
+	width: 70%;
+}
+
+.story-detail__breadcrumbs a {
+	color: #ffffff;
+}
+
+.story-detail__title {
+	margin-top: 30px;
+}
+
+.story-detail__right-content {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 auto;
+	max-width: 810px;
+	width: 70%;
+}
+
+.story-detail__left-content {
+	display: flex;
+	justify-content: flex-start;
+	margin: 0 auto;
+	max-width: 810px;
+	width: 70%;
+}
+
+.story-detail__text {
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 1.83333;
+	padding-bottom: 60px;
+	padding-top: 60px;
+	width: 47%;
+}
+
+.story-detail__second {
+	background-color: #000;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1)), url(../img/story2.png);
+	background-position: center, right center;
+	background-repeat: no-repeat;
+	background-size: cover, 70%;
+}
+
+.story-detail__third {
+	background-color: #000;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.8)), url(../img/story3.png);
+	background-position: center, left center;
+	background-repeat: no-repeat;
+	background-size: cover, 70%;
+}
+
+.story-detail__4th {
+	background-color: #000;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1)), url(../img/story4.png);
+	background-position: center, right center;
+	background-repeat: no-repeat;
+	background-size: cover, 70%;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {
@@ -774,6 +852,30 @@ a:focus {
 
 .news-single {
 	width: 90%;
+}
+
+.story-detail__first {
+	background-position: center;
+	background-size: cover;
+}
+
+.story-detail__text {
+	width: 60%;
+}
+
+.story-detail__second {
+	background-position: center;
+	background-size: cover;
+}
+
+.story-detail__third {
+	background-position: center;
+	background-size: cover;
+}
+
+.story-detail__4th {
+	background-position: center;
+	background-size: cover;
 }
 
 }
@@ -1011,6 +1113,22 @@ a:focus {
 
 .news-single__next-text {
 	font-size: 12px;
+}
+
+.story-detail__breadcrumbs {
+	width: 90%;
+}
+
+.story-detail__right-content {
+	width: 90%;
+}
+
+.story-detail__left-content {
+	width: 90%;
+}
+
+.story-detail__text {
+	width: 100%;
 }
 
 }

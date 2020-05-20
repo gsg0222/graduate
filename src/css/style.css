@@ -318,6 +318,10 @@ a:focus {
 	width: 90%;
 }
 
+.comments--detail {
+	margin-top: 30px;
+}
+
 .comments__title {
 	color: #301F1B;
 }
@@ -795,6 +799,43 @@ a:focus {
 	background-size: cover, 70%;
 }
 
+.comments-detail {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 810px;
+	width: 70%;
+}
+
+.comments-detail__card {
+	margin-right: 3.7037%;
+	margin-top: 30px;
+	width: 30.8642%;
+}
+
+.comments-detail__card:nth-child(3n) {
+	margin-right: 0;
+}
+
+.comments-detail__name {
+	color: #333333;
+	font-size: 22px;
+	text-align: center;
+}
+
+.comments-detail__expert {
+	color: #666666;
+	font-size: 12px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.comments-detail__text {
+	color: #333333;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {
@@ -876,6 +917,10 @@ a:focus {
 .story-detail__4th {
 	background-position: center;
 	background-size: cover;
+}
+
+.comments-detail {
+	width: 90%;
 }
 
 }
@@ -1128,6 +1173,15 @@ a:focus {
 }
 
 .story-detail__text {
+	width: 100%;
+}
+
+.comments-detail {
+	display: block;
+}
+
+.comments-detail__card {
+	margin-right: 0;
 	width: 100%;
 }
 

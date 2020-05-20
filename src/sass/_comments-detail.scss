@@ -1,0 +1,50 @@
+.comments-detail {
+    margin: 0 auto;
+    width: 70%;
+    max-width: 810px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq(lg) {
+        width: 90%;
+    }
+
+    @include mq() {
+        display: block;
+    }
+
+    &__card {
+        width: (250px / 810px) * 100%;
+        margin-top: 30px;
+        margin-right: (30px / 810px) * 100%;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        @include mq() {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__name {
+        font-size: $fz_large;
+        color: $clr_normal;
+        text-align: center;
+    }
+
+    &__expert {
+        margin-top: 10px;
+        font-size: $fz_min;
+        color: #666666;
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: 15px;
+        font-size: $fz_normal;
+        color: $clr_normal;
+    }
+
+}

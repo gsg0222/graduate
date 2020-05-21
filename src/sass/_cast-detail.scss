@@ -21,6 +21,7 @@
     }
 
     &__card {
+        margin-bottom: 30px;
         width: (390px / 810px) * 100%;
         margin-right: (30px / 810px) * 100%;
         display: flex;
@@ -56,6 +57,10 @@
         color: #1A1A1A;
         font-weight: bold;
         line-height: (29.6px / $fz_large);
+
+        @include mq() {
+            font-size: $fz_normal;
+        }
     }
 
     &__expert {
@@ -69,5 +74,41 @@
         font-size: $fz_min;
         color: #1A1A1A;
         line-height: (21 / 12);
+    }
+
+    &__musician {
+        margin-top: 60px;
+        padding-bottom: 50px;
+        background-color: rgba($clr_strong1, 0.9);
+    }
+
+    &__musician-title {
+        padding-top: 50px;
+    }
+
+    &__musician-inner {
+        margin: 60px auto 0;
+        width: 70%;
+        max-width: 810px;
+
+        @include mq(lg) {
+            width: 90%;
+        }
+
+    }
+
+    &__staff {
+        margin-top: 60px;
+        margin: 60px auto 0;
+        width: 70%;
+        max-width: 810px;
+
+        @include mq(lg) {
+            width: 90%;
+        }
+    }
+
+    &__staff-title {
+        margin-bottom: 60px;
     }
 }

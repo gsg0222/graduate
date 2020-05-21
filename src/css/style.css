@@ -858,6 +858,7 @@ a:focus {
 
 .cast-detail__card {
 	display: flex;
+	margin-bottom: 30px;
 	margin-right: 3.7037%;
 	width: 48.14815%;
 }
@@ -899,6 +900,33 @@ a:focus {
 	color: #1A1A1A;
 	font-size: 12px;
 	line-height: 1.75;
+}
+
+.cast-detail__musician {
+	background-color: rgba(255, 255, 255, 0.9);
+	margin-top: 60px;
+	padding-bottom: 50px;
+}
+
+.cast-detail__musician-title {
+	padding-top: 50px;
+}
+
+.cast-detail__musician-inner {
+	margin: 60px auto 0;
+	max-width: 810px;
+	width: 70%;
+}
+
+.cast-detail__staff {
+	margin: 60px auto 0;
+	margin-top: 60px;
+	max-width: 810px;
+	width: 70%;
+}
+
+.cast-detail__staff-title {
+	margin-bottom: 60px;
 }
 
 @media screen and (max-width: 991px) {
@@ -989,6 +1017,14 @@ a:focus {
 }
 
 .cast-detail__sub-cast {
+	width: 90%;
+}
+
+.cast-detail__musician-inner {
+	width: 90%;
+}
+
+.cast-detail__staff {
 	width: 90%;
 }
 
@@ -1261,6 +1297,10 @@ a:focus {
 .cast-detail__card {
 	margin-right: 0;
 	width: 100%;
+}
+
+.cast-detail__name {
+	font-size: 16px;
 }
 
 }

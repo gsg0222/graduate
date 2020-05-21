@@ -1,6 +1,5 @@
 .story-detail {
-    &__first {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.8)), url(../img/story1.png);
+    &__left-contents {
         background-size: cover, 70%;
         background-position: center, left center;
         background-repeat: no-repeat;
@@ -10,6 +9,19 @@
             background-size: cover;
             background-position: center;
         }
+    }
+
+    &__right-contents {
+        background-size: cover, 70%;
+        background-position: center, right center;
+        background-repeat: no-repeat;
+        background-color: #000;
+
+        @include mq(lg) {
+            background-size: cover;
+            background-position: center;
+        }
+
     }
 
     &__no-bgi {
@@ -75,48 +87,5 @@
             width: 100%;
         }
     }
-
-    &__second {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1)), url(../img/story2.png);
-        background-size: cover, 70%;
-        background-position: center, right center;
-        background-repeat: no-repeat;
-        background-color: #000;
-
-        @include mq(lg) {
-            background-size: cover;
-            background-position: center;
-        }
-
-    }
-
-    &__third {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.8)), url(../img/story3.png);
-        background-size: cover, 70%;
-        background-position: center, left center;
-        background-repeat: no-repeat;
-        background-color: #000;
-
-        @include mq(lg) {
-            background-size: cover;
-            background-position: center;
-        }
-
-    }
-
-    &__4th {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1)), url(../img/story4.png);
-        background-size: cover, 70%;
-        background-position: center, right center;
-        background-repeat: no-repeat;
-        background-color: #000;
-
-        @include mq(lg) {
-            background-size: cover;
-            background-position: center;
-        }
-
-    }
-
 
 }

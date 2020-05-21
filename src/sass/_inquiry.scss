@@ -1,0 +1,112 @@
+.inquiry {
+    margin: 30px auto 0;
+    width: 70%;
+    max-width: 810px;
+
+    @include mq(lg) {
+        width: 90%;
+    }
+
+    &__wrapper {
+        margin-top: 30px;
+        padding: 30px;
+        background-color: rgba($clr_strong1, 0.29);
+
+        @include mq() {
+            padding: 15px;
+        }
+    }
+
+    &__text {
+        font-size: $fz_normal;
+        color: $clr_normal;
+        line-height: (30 / 16);
+    }
+
+    &__form {
+        margin-top: 20px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 15px;
+
+        @include mq() {
+            display: block;
+        }
+
+        label {
+            display: block;
+            text-align: right;
+            margin-right: 20px;
+            font-size: $fz_normal;
+            color: $clr_normal;
+
+            @include mq() {
+                text-align: left;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        input[type="text"] {
+            display: block;
+            width: (520px / 750px) * 100%;
+            height: 45px;
+            font-size: $fz_normal;
+            color: $clr_normal;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            outline: none;
+            background: $clr_strong1;
+
+            @include mq() {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+
+        textarea {
+            display: block;
+            width: (520px / 750px) * 100%;
+            height: 165px;
+            font-size: $fz_normal;
+            color: $clr_normal;
+            line-height: 1.5;
+            appearance: none;
+            resize: none;
+            padding: 0;
+            border: 0;
+            outline: none;
+            background: $clr_strong1;
+
+            @include mq() {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__btn {
+        text-align: center;
+        margin-top: 30px;
+
+        input[type="submit"] {
+            display: inline-block;
+            color: $clr_strong1;
+            background-color: $clr_strong2;
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: $fz_normal;
+            appearance: none;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+    }
+}

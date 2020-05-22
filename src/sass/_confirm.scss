@@ -1,0 +1,22 @@
+.confirm {
+    margin-top: 30px;
+
+    &__wrapper {
+        margin: 30px auto 0;
+        padding: 24px 30px;
+        width: 70%;
+        max-width: 810px;
+        background-color: rgba($clr_strong1, 0.29);
+
+        @include mq(lg) {
+            width: 90%;
+        }
+    }
+
+    &__text {
+        font-size: $fz_normal;
+        color: $clr_normal;
+        text-align: center;
+        line-height: (30 / 16);
+    }
+}

@@ -1000,6 +1000,25 @@ a:focus {
 	width: 200px;
 }
 
+.confirm {
+	margin-top: 30px;
+}
+
+.confirm__wrapper {
+	background-color: rgba(255, 255, 255, 0.29);
+	margin: 30px auto 0;
+	max-width: 810px;
+	padding: 24px 30px;
+	width: 70%;
+}
+
+.confirm__text {
+	color: #333333;
+	font-size: 16px;
+	line-height: 1.875;
+	text-align: center;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {
@@ -1090,6 +1109,10 @@ a:focus {
 }
 
 .inquiry {
+	width: 90%;
+}
+
+.confirm__wrapper {
 	width: 90%;
 }
 
@@ -1269,6 +1292,10 @@ a:focus {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
+}
+
+.footer__copy {
+	margin: 0 20px;
 }
 
 .sub-header__img-wrapper {

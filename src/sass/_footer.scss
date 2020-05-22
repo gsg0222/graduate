@@ -8,5 +8,9 @@
         text-align: center;
         color: $clr_strong1;
         font-size: $fz_min;
+
+        @include mq() {
+            margin: 0 20px;
+        }
     }
 }

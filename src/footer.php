@@ -1,3 +1,11 @@
+<?php
+/**
+ * Footer.
+ *
+ * @package WP
+ */
+
+?>
 	<!-- この下からfooter -->
 	<section class="schedule">
 		<div class="schedule__wrapper">
@@ -41,7 +49,7 @@
 	<footer class="footer">
 		<small class="footer__copy">Copyright &copy; 2019 完全版マハーバーラタ All Rights Reserved.</small>
 	</footer>
-	<script type="text/javascript" src="js/script.min.js"></script>
+	<?php wp_footer(); ?>
 </body>
 
 </html>

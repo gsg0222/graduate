@@ -1019,6 +1019,27 @@ a:focus {
 	text-align: center;
 }
 
+.youtube {
+	margin: 60px auto 0;
+	max-width: 810px;
+	width: 70%;
+}
+
+.youtube__wrapper {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.youtube__wrapper iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
 @media screen and (max-width: 991px) {
 
 .main-visual__title {
@@ -1113,6 +1134,10 @@ a:focus {
 }
 
 .confirm__wrapper {
+	width: 90%;
+}
+
+.youtube {
 	width: 90%;
 }
 

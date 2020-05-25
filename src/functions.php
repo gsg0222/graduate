@@ -17,3 +17,6 @@ function my_enqueue_scripts() {
 	wp_enqueue_script( 'my_script', TEMPLATE_DIRE . '/js/script.min.js', array(), gmdate( 'YmdGis', filemtime( TEMPLATE_PATH . '/css/style.css' ) ), true );
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_scripts' );
+
+// アイキャッチ画像を利用できるようにする.
+add_theme_support( 'post-thumbnails' );

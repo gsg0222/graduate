@@ -44,75 +44,59 @@
 		<!-- /.introduction__content -->
 	</section>
 
+	<section class="youtube">
+		<div class="youtube__wrapper">
+			<iframe width="854" height="480" src="<?php the_field( 'youtube' ); ?>" frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+		<!-- /.youtube__wrapper -->
+	</section>
+
 	<section class="news">
 		<p class="title news__title">NEWS</p>
-		<a href="#" class="btn news__btn">ニュース一覧へ</a>
+		<a href="<?php echo esc_url( get_category_link( 2 ) ); ?>" class="btn news__btn">ニュース一覧へ</a>
 		<div class="news__cards">
+<?php
+$args  = array(
+	'post_type'      => 'post',
+	'category_name'  => 'news',
+	'order'          => 'DESC',
+	'posts_per_page' => 5,
+);
+$query = new WP_Query( $args );
+$i     = 0;
+if ( $query->have_posts() ) :
+	while ( $query->have_posts() ) :
+		$query->the_post();
+		if ( $i < 3 ) :
+			?>
 			<div class="card news__card">
-				<a href="#" class="card__anchor">
-					<figure class="card__img-wrapper">
-						<img class="card__img" src="img/news1.png" alt="ニュース1">
-					</figure>
-					<div class="card__body">
-						<p class="card__date">2019.9.30</p>
-						<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
-					</div>
-				</a>
-				<!-- /.card__body -->
-			</div>
-			<!-- /.card news__card -->
-			<div class="card news__card">
-				<a href="#" class="card__anchor">
-					<figure class="card__img-wrapper">
-						<img class="card__img" src="img/news1.png" alt="ニュース1">
-					</figure>
-					<div class="card__body">
-						<p class="card__date">2019.9.30</p>
-						<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
-					</div>
-					<!-- /.card__body -->
-				</a>
-			</div>
-			<!-- /.card news__card -->
-			<div class="card news__card">
-				<a href="#" class="card__anchor">
-					<figure class="card__img-wrapper">
-						<img class="card__img" src="img/news1.png" alt="ニュース1">
-					</figure>
-					<div class="card__body">
-						<p class="card__date">2019.9.30</p>
-						<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
-					</div>
-					<!-- /.card__body -->
-				</a>
-			</div>
-			<!-- /.card news__card -->
+			<?php
+		else :
+			?>
 			<div class="card card--sub news__card-sub">
-				<a href="#" class="card__anchor">
+			<?php
+		endif;
+		?>
+				<a href="<?php the_permalink(); ?>" class="card__anchor">
 					<figure class="card__img-wrapper">
-						<img class="card__img" src="img/news1.png" alt="ニュース1">
+						<?php the_post_thumbnail( 'medium' ); ?>
 					</figure>
 					<div class="card__body">
-						<p class="card__date">2019.9.30</p>
-						<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
+						<p class="card__date"><?php the_time( 'Y.m.d' ); ?></p>
+						<p class="card__text"><?php the_title(); ?></p>
 					</div>
 					<!-- /.card__body -->
 				</a>
 			</div>
 			<!-- /.card__sub news__card-sub -->
-			<div class="card card--sub news__card-sub">
-				<a href="#" class="card__anchor">
-					<figure class="card__img-wrapper">
-						<img class="card__img" src="img/news1.png" alt="ニュース1">
-					</figure>
-					<div class="card__body">
-						<p class="card__date">2019.9.30</p>
-						<p class="card__text">「完全版マハーバーラタ」2020年7月・東京公演！！</p>
-					</div>
-					<!-- /.card__body -->
-				</a>
-			</div>
-			<!-- /.card__sub news__card-sub -->
+		<?php
+		$i++;
+	endwhile;
+endif;
+wp_reset_postdata();
+?>
 		</div>
 		<!-- /.news__cards -->
 	</section>
@@ -130,7 +114,7 @@
 		</div>
 		<!-- /.story__text -->
 		<div class="story__btn">
-			<a href="#" class="btn ">もっと詳しく</a>
+			<a href="<?php echo esc_url( get_permalink( 8 ) ); ?>" class="btn ">もっと詳しく</a>
 		</div>
 		<!-- /.story__btn -->
 	</section>
@@ -144,82 +128,44 @@
 				まずこの聖句が浮かんだ。境界線に立つ人類。超越する意志。小池博史氏の心象が生み出したアバターが乱舞しながら深層意識に波紋を起こしてゆく。</p>
 		</div>
 		<!-- /.comments__content -->
-		<a href="" class="btn comments__btn">もっと見る</a>
+		<a href="<?php echo esc_url( get_permalink( 10 ) ); ?>" class="btn comments__btn">もっと見る</a>
 	</section>
 
 	<section class="cast">
 		<p class="title cast__title">CAST</p>
 		<div class="cast__contents cast--detail">
 			<div class="cast__contents-inner">
+<?php
+
+/*
+キャストの上位3つを取得して表示
+3未満の場合はあるだけ表示する
+*/
+
+$casts      = SCF::get( 'cast' );
+$loop_count = min( count( $casts ), 3 );
+for ( $i = 0; $i < $loop_count; $i++ ) :
+	// Get IMG URL.
+	$img     = $casts[ $i ]['img'];
+	$img_url = wp_get_attachment_image_src( $img, 'medium' );
+	?>
 				<div class="cast__content">
 					<div class="cast__img-wrapper">
-						<div class="cast__img" style="background-image: url(img/koike.png);"></div>
+						<div class="cast__img" style="background-image: url(<?php echo esc_url( $img_url[0] ); ?>);"></div>
 					</div>
-					<p class="cast__country">日本</p>
-					<p class="cast__name">小池博史</p>
-					<p class="cast__expert"></p>
-					<p class="cast__text">茨城県日立市出身。一橋大学卒業。<br>
-						演出家・作家・振付家・舞台美術家・写真家、舞台芸術の学校（P.A.I.）校長。<br>
-						1982年「パパ・タラフマラ」設立。<br>
-						演劇、舞踊、オペラ、美術、建築等、ジャンルを縦横に渡りながら空間を築き上げてゆく手法で、国際的に高い評価を確立。<br>
-						3.11を受けて、翌2012年5月にパパ・タラフマラ解散。すぐに「小池博史ブリッジプロジェクト」を立ち上げ、作品を創作しながら、若手表現者の育成と芸術文化事業のプロデュースを手掛けるなど、活動は多岐に渡る。<br>
-						著書に「ロンググッドバイ～パパ・タラフマラとその時代」（青幻舎刊）、「からだのこえをきく」（新潮社刊）等。</p>
+					<p class="cast__country"><?php echo esc_html( $casts[ $i ]['country'] ); ?></p>
+					<p class="cast__name"><?php echo esc_html( $casts[ $i ]['name'] ); ?></p>
+					<p class="cast__expert"><?php echo esc_html( $casts[ $i ]['role'] ); ?></p>
+					<p class="cast__text"><?php echo nl2br( esc_html( $casts[ $i ]['intro'] ) ); ?></p>
 				</div>
 				<!-- /.cast__content -->
-				<div class="cast__content">
-					<div class="cast__img-wrapper">
-						<div class="cast__img" style="background-image: url(img/koike.png);"></div>
-					</div>
-					<p class="cast__country">日本</p>
-					<p class="cast__name">小池博史</p>
-					<p class="cast__expert"></p>
-					<p class="cast__text">茨城県日立市出身。一橋大学卒業。<br>
-						演出家・作家・振付家・舞台美術家・写真家、舞台芸術の学校（P.A.I.）校長。<br>
-						1982年「パパ・タラフマラ」設立。<br>
-						演劇、舞踊、オペラ、美術、建築等、ジャンルを縦横に渡りながら空間を築き上げてゆく手法で、国際的に高い評価を確立。<br>
-						3.11を受けて、翌2012年5月にパパ・タラフマラ解散。すぐに「小池博史ブリッジプロジェクト」を立ち上げ、作品を創作しながら、若手表現者の育成と芸術文化事業のプロデュースを手掛けるなど、活動は多岐に渡る。<br>
-						著書に「ロンググッドバイ～パパ・タラフマラとその時代」（青幻舎刊）、「からだのこえをきく」（新潮社刊）等。</p>
-				</div>
-				<!-- /.cast__content -->
-				<div class="cast__content">
-					<div class="cast__img-wrapper">
-						<div class="cast__img" style="background-image: url(img/koike.png);"></div>
-					</div>
-					<p class="cast__country">日本</p>
-					<p class="cast__name">小池博史</p>
-					<p class="cast__expert">(テスト)</p>
-					<p class="cast__text">茨城県日立市出身。一橋大学卒業。<br>
-						演出家・作家・振付家・舞台美術家・写真家、舞台芸術の学校（P.A.I.）校長。<br>
-						1982年「パパ・タラフマラ」設立。<br>
-						演劇、舞踊、オペラ、美術、建築等、ジャンルを縦横に渡りながら空間を築き上げてゆく手法で、国際的に高い評価を確立。<br>
-						3.11を受けて、翌2012年5月にパパ・タラフマラ解散。すぐに「小池博史ブリッジプロジェクト」を立ち上げ、作品を創作しながら、若手表現者の育成と芸術文化事業のプロデュースを手掛けるなど、活動は多岐に渡る。<br>
-						著書に「ロンググッドバイ～パパ・タラフマラとその時代」（青幻舎刊）、「からだのこえをきく」（新潮社刊）等。</p>
-				</div>
-				<!-- /.cast__content -->
+	<?php
+endfor;
+?>
 			</div>
 			<!-- /.cast__contents-inner -->
 		</div>
 		<!-- /.cast__contents -->
-		<div class="cast-detail__sub-cast">
-			<div class="cast-detail__card">
-				<figure class="cast-detail__img-wrapper">
-					<img src="img/shirai.png" alt="白井さち子" class="cast-detail__sub-cast-img">
-				</figure>
-				<div class="cast-detail__content">
-					<p class="cast-detail__role">出演</p>
-					<p class="cast-detail__name">白井さち子</p>
-					<p class="cast-detail__expert">(バレエ、コンテンポラリーダンス)</p>
-					<p class="cast-detail__text">7歳よりクラシックバレエを始める。<br>
-						82年より6年間橘バレエ学校に在籍。<br>
-						牧阿佐美に師事。<br>
-						日本女子体育短期大学舞踊コース卒。<br>
-						在籍中、太田順造にパントマイムを師事。</p>
-				</div>
-				<!-- /.cast-detail__sub-cast-content -->
-			</div>
-			<!-- /.cast-detail__sub-cast-card -->
-		</div>
-		<!-- /.cast-detail__sub-cast -->
 	</section>
 <?php
 get_footer();

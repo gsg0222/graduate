@@ -35,6 +35,21 @@
         padding: 30px;
         background-color: rgba($clr_strong1, 0.9);
 
+        // 本文に当てるCSS。p,h2,h3に最低限のCSSを当てる
+        p {
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.17em;
+            margin-bottom: 1rem;
+        }
+
     }
 
     &__sub-title {
@@ -61,6 +76,11 @@
         @include mq() {
             width: (400px / 810px) * 100%;
         }
+    }
+
+    &__nav-wrapper--next {
+        display: flex;
+        justify-content: flex-end;
     }
 
     &__prev-arrow {

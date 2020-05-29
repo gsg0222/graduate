@@ -47,6 +47,13 @@
         margin-top: 30px;
     }
 
+    &__sub-title {
+        padding-top: 54px;
+        color: $clr_strong1;
+        font-size: $fz_large;
+        text-align: center;
+    }
+
     &__right-content {
         display: flex;
         justify-content: flex-end;
@@ -72,7 +79,7 @@
     }
 
     &__text {
-        padding-top: 60px;
+        padding-top: 24px;
         padding-bottom: 60px;
         color: $clr_strong1;
         font-size: $fz_min;

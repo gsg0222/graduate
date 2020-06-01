@@ -986,6 +986,10 @@ img {
 	text-align: right;
 }
 
+.inquiry__row span {
+	width: 69.33333%;
+}
+
 .inquiry__row input[type="text"] {
 	background: #ffffff;
 	border: none;
@@ -996,7 +1000,7 @@ img {
 	height: 45px;
 	outline: none;
 	padding: 0;
-	width: 69.33333%;
+	width: 100%;
 }
 
 .inquiry__row textarea {
@@ -1013,7 +1017,7 @@ img {
 	outline: none;
 	padding: 0;
 	resize: none;
-	width: 69.33333%;
+	width: 100%;
 }
 
 .inquiry__btn {
